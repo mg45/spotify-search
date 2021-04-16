@@ -1,0 +1,24 @@
+<script src="/js/jquery.min.js"></script>
+<script src="/js/jquery-migrate.min.js"></script>
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/js/hs.core.js"></script>
+<script src="/js/hs-video-bg.min.js"></script>
+<script src="/js/hs-go-to.min.js"></script>
+
+<script>
+  $(document).on('ready', function () {
+
+    console.log("READYYYYYY");
+    // INITIALIZATION OF VIDEO BACKGROUND
+    // =======================================================
+    $('.js-video-bg').each(function () {
+      var videoBg = new HSVideoBg($(this)).init();
+    });
+
+    // INITIALIZATION OF GO TO
+    // =======================================================
+    $('.js-go-to').each(function () {
+      var goTo = new HSGoTo($(this)).init();
+    });
+  });
+</script>

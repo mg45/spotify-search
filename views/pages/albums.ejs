@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include ('../partials/head.ejs') %>
+
+<body>
+   
+    <div class="container space-2">
+        <!-- Title -->
+        <div class="row justify-content-md-between align-items-md-center mb-7">
+            <div class="col-lg-5">
+                <h2>All albums</h2>
+            </div>
+
+            <div class="col-lg-6 text-lg-right mt-lg-auto">
+                <a class="font-weight-bold" href="/">
+                    <i class="fas fa-angle-left fa-sm ml-1"></i>
+                    Go back to search
+                </a>
+            </div>
+        </div>
+        <!-- End Title -->
+
+        <div class="row">
+
+            <% for( let i=0; i < data.items.length; i++ ) { %>
+                <% for( let j=0; j < data.items[i].name.length; j++ ) { %>
+                    <% if (j <=0) { %>
+
+                        <div class="col-md-6 mb-5 mb-md-5 mb-lg-5">
+                            <!-- Album -->
+                            <a class="card text-body transition-3d-hover" href="/albums/tracklist/<%= data.items[i].id %> ">
+                                <img class="card-img-top" src="<%= data.items[i].images[0].url %>"
+                                    alt="Image Description">
+                                <div class="card-body text-center">
+                                    <h3 class="text-dark">
+                                        <%= data.items[i].name %>
+                                    </h3>
+                                    <p class="mb-0">Show Tracklist</p>
+                                </div>
+                            </a>
+                            <!-- End Album -->
+                        </div>
+
+                        <% } %>
+                            <% } %>
+                                <% } %>
+
+
+        </div>
+        <a class="js-go-to go-to position-fixed" href="#" style="visibility: hidden;" data-hs-go-to-options='{
+            "offsetTop": 700,
+            "position": {
+              "init": {
+                "right": 15
+              },
+              "show": {
+                "bottom": 15
+              },
+              "hide": {
+                "bottom": -15
+              }
+            }
+          }'>
+           <i class="fas fa-arrow-up"></i>
+       </a>
+    </div>
+
+    <%- include ('../partials/compulsoryJs.ejs') %>
+
+</body>
+</html>

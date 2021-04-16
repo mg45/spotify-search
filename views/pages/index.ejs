@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include ('../partials/head.ejs') %>
+
+    <body>
+
+        <!-- ========== MAIN ========== -->
+        <main id="content" role="main">
+            <!-- Hero Section -->
+            <div class="gradient-x-overlay-lg-navy-video">
+                <!-- Video Background -->
+                <div class="js-video-bg d-none d-md-block position-absolute w-100 h-100" data-hs-video-bg-options='{
+             "type": "you-tube",
+             "videoId": "-X_2TT43PRs",
+             "ratio": 0.75
+           }'>
+                </div>
+                <!-- End Video Background -->
+
+                <div class="position-relative z-index-2">
+                    <!-- Content -->
+                    <div class="d-md-flex">
+                        <div
+                            class="container d-md-flex align-items-md-center min-vh-md-100 text-center space-3 space-top-md-4 space-top-lg-3">
+                            <div class="w-lg-85 mx-lg-auto">
+                                <!-- Info -->
+                                <div class="mt-5 mb-7">
+                                    <h1 class="display-4 text-white mb-3">You are looking for music?</h1>
+                                    <p class="lead text-white">Use the artist search to find all the content you want. This includes: Artists, Albums, Songs, and a short song preview.</p>
+                                </div>
+                                <!-- End Info -->
+
+                                <!-- Form -->
+                                <form action="/artist-search" method="GET" class="js-validate w-lg-85 mx-lg-auto">
+                                    <div class="card p-3 mb-5">
+                                        <div class="form-row input-group-borderless">
+                                            <div class="col-sm mb-2 mb-md-0">
+                                                <input type="text" class="form-control shadow-none"
+                                                    name="artistSearchString" placeholder="Search for artists" aria-label="Name"
+                                                    required>
+                                            </div>
+                                            <div class="col-sm d-sm-none">
+                                                <hr class="my-0">
+                                            </div>
+                                            <div class="col-md-auto">
+                                                <button type="submit" class="btn btn-block btn-primary btn-wide">Get
+                                                    Started</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <!-- End Form -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Content -->
+                </div>
+            </div>
+            <!-- End Hero Section -->
+        </main>
+        <!-- ========== END MAIN ========== -->
+
+        <%- include ('../partials/compulsoryJs.ejs') %>
+
+    </body>
+
+</html>
